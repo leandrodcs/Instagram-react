@@ -1,4 +1,5 @@
 import Posts from "./Posts";
+import Sidebar from "./Sidebar";
 import Stories from "./Stories";
 
 export default function MainContent() {
@@ -7,6 +8,7 @@ export default function MainContent() {
       <div class="main">
         <Stories />
         <Posts />
+        <Sidebar />
       </div>
       <div class="main-blank"></div>
       <div class="bottom-fixer"></div>

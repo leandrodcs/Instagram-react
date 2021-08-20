@@ -1,84 +1,26 @@
+import SidebarSuggestion from "./SidebarSuggestion";
+
 export default function Sidebar() {
+  const suggestions = [
+    {name: `bad.vibes.memes`, image: `assets/badvibesmemes 1.png`, follows: true},
+    {name: `chibirdart`, image: `assets/chibirdart 1.png`, follows: true},
+    {name: `razoesparaacreditar`, image: `assets/razoesparaacreditar 1.png`, follows: false},
+    {name: `adorable_animals`, image: `assets/adorableanimals 1.png`, follows: true},
+    {name: `smallcutecats`, image: `assets/smallcutecats 1.png`, follows: true},
+  ];
+  const user = {name: `Leandro Schmidt`, username: `leandrodcs`, image: `assets/catanacomics 1.png`}
+
   return (
     <div class="sidebar">
-      <div class="sidebar-header">
-        <a href="#">
-          <img src="assets/catanacomics 1.png" />
-        </a>
-        <div class="sidebar-header-writing">
-          <a href="#" class="account">
-            catanacomics
-          </a>
-          <div class="account-name">Catana</div>
-        </div>
-      </div>
+      <SidebarHeader name={user.name} username={user.username} image={user.image}/>
+
       <div class="suggestions-header">
         <p>Sugestões para você</p>
         <a href="#">Ver tudo</a>
       </div>
-      <div class="suggestion">
-        <div class="suggestion-right">
-          <a href="#">
-            <img class="suggestion-image" src="assets/badvibesmemes 1.png" />
-          </a>
-          <div class="suggestion-right-writing">
-            <a href="#">bad.vibes.memes</a>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <p>Seguir</p>
-      </div>
-      <div class="suggestion">
-        <div class="suggestion-right">
-          <a href="#">
-            <img class="suggestion-image" src="assets/chibirdart 1.png" />
-          </a>
-          <div class="suggestion-right-writing">
-            <a href="#">chibirdart</a>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <p>Seguir</p>
-      </div>
-      <div class="suggestion">
-        <div class="suggestion-right">
-          <a href="#">
-            <img
-              class="suggestion-image"
-              src="assets/razoesparaacreditar 1.png"
-            />
-          </a>
-          <div class="suggestion-right-writing">
-            <a href="#">razoesparaacreditar</a>
-            <p>Novo no Instagram</p>
-          </div>
-        </div>
-        <p>Seguir</p>
-      </div>
-      <div class="suggestion">
-        <div class="suggestion-right">
-          <a href="#">
-            <img class="suggestion-image" src="assets/adorableanimals 1.png" />
-          </a>
-          <div class="suggestion-right-writing">
-            <a href="#">adorable_animals</a>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <p>Seguir</p>
-      </div>
-      <div class="suggestion">
-        <div class="suggestion-right">
-          <a href="#">
-            <img class="suggestion-image" src="assets/smallcutecats 1.png" />
-          </a>
-          <div class="suggestion-right-writing">
-            <a href="#">smallcutecats</a>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <p>Seguir</p>
-      </div>
+      {suggestions.map((s) => (
+        <SidebarSuggestion name={s.name} image={s.image} follows={s.follows} />
+      ))}
       <p class="sidebar-footer">
         <a href="">Sobre</a> • <a href="">Ajuda</a> • <a href="">Imprensa</a>•
         <a href="">API</a> • <a href="">Carreiras</a> •
@@ -89,4 +31,20 @@ export default function Sidebar() {
       <p class="sidebar-footer fixer">© 2021 INSTAGRAM DO FACEBOOK</p>
     </div>
   );
+}
+
+function SidebarHeader(props) {
+  return (
+    <div class="sidebar-header">
+    <a href="#">
+      <img src={props.image} />
+    </a>
+    <div class="sidebar-header-writing">
+      <a href="#" class="account">
+      {props.username}
+      </a>
+      <div class="account-name">{props.name}</div>
+    </div>
+  </div>
+  )
 }
