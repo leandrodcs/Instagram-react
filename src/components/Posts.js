@@ -13,18 +13,9 @@ export default function Posts() {
       commentsAmount: `987`,
       video: false,
       comments: [
-        {
-          author: `lester`,
-          text: ` This cat can use the phone, I knew that.`,
-        },
-        {
-          author: `merellalunkes`,
-          text: ` ownti que fofoleto!!!`,
-        },
-        {
-          author: `rodrigodcss`,
-          text: ` Que paia`,
-        },
+        {author: `lester`, text: ` This cat can use the phone, I knew that.`},
+        {author: `merellalunkes`, text: ` ownti que fofoleto!!!`},
+        {author: `rodrigodcss`, text: ` Que paia`},
       ],
     },
     {
@@ -38,19 +29,9 @@ export default function Posts() {
       commentsAmount: `840`,
       video: false,
       comments: [
-        {
-          author: `gutsyputsy`,
-          text: ` olha que lindo amooor`,
-          tag: ` @agoodoy`,
-        },
-        {
-          author: `iverti.radaveli`,
-          text: ` preciso mandar isso no grupo da família!`,
-        },
-        {
-          author: `rodrigodcss`,
-          text: ` Que paia 2`,
-        },
+        {author: `gutsyputsy`, text: ` olha que lindo amooor`, tag: ` @agoodoy`},
+        {author: `iverti.radaveli`, text: ` preciso mandar isso no grupo da família!`},
+        {author: `rodrigodcss`, text: ` Que paia 2`},
       ],
     },
     {
@@ -65,21 +46,9 @@ export default function Posts() {
       commentsAmount: `2077`,
       video: true,
       comments: [
-        {
-          author: `lester`,
-          text: `That was a longtime ago`,
-          tag: ` @sean`,
-        },
-        {
-          author: `julianasantos`,
-          text: ` para de me manda esse video`,
-          tag: ` @leandrodcs`,
-        },
-        {
-          author: `merellalunkes`,
-          text: ` para de me manda esse video`,
-          tag: ` @rodrigodcss`,
-        },
+        {author: `lester`, text: `That was a long time ago`, tag: ` @sean`},
+        {author: `julianasantos`, text: ` para de me manda esse video`, tag: ` @leandrodcs`},
+        {author: `merellalunkes`, text: ` para de me manda esse video`, tag: ` @rodrigodcss`},
       ],
     },
   ];
