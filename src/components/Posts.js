@@ -1,247 +1,114 @@
+import Post from "./Post";
+
 export default function Posts() {
+  const postProps = [
+    {
+      author: `meowed`,
+      authorImg: `assets/meowed 1.png`,
+      postImg: `assets/gato-telefone 1.png`,
+      userLiked: `respondeai`,
+      userLikedImg: `assets/respondeai 1.png`,
+      likesAmount: `101.523`,
+      lastCommentTime: `2`,
+      commentsAmount: `987`,
+      video: false,
+      comments: [
+        {
+          author: `lester`,
+          text: ` This cat can use the phone, I knew that.`,
+        },
+        {
+          author: `merellalunkes`,
+          text: ` ownti que fofoleto!!!`,
+        },
+        {
+          author: `rodrigodcss`,
+          text: ` Que paia`,
+        },
+      ],
+    },
+    {
+      author: `barked`,
+      authorImg: `assets/barked 1.png`,
+      postImg: `assets/dog 1.png`,
+      userLiked: `adorable_animals`,
+      userLikedImg: `assets/adorableanimals 1.png`,
+      likesAmount: `99.159`,
+      lastCommentTime: `5`,
+      commentsAmount: `840`,
+      video: false,
+      comments: [
+        {
+          author: `gutsyputsy`,
+          text: ` olha que lindo amooor`,
+          tag: ` @agoodoy`,
+        },
+        {
+          author: `iverti.radaveli`,
+          text: ` preciso mandar isso no grupo da família!`,
+        },
+        {
+          author: `rodrigodcss`,
+          text: ` Que paia 2`,
+        },
+      ],
+    },
+    {
+      author: `beetlejuice`,
+      authorImg: `assets/beetle.jpg`,
+      videoMp4: `assets/Oblivion NPC Conversation.mp4`,
+      videoOgg: `assets/Oblivion NPC Conversation.ogg`,
+      userLiked: `chibirdart`,
+      userLikedImg: `assets/chibirdart 1.png`,
+      likesAmount: `99.159`,
+      lastCommentTime: `3`,
+      commentsAmount: `2077`,
+      video: true,
+      comments: [
+        {
+          author: `lester`,
+          text: `That was a longtime ago`,
+          tag: ` @sean`,
+        },
+        {
+          author: `julianasantos`,
+          text: ` para de me manda esse video`,
+          tag: ` @leandrodcs`,
+        },
+        {
+          author: `merellalunkes`,
+          text: ` para de me manda esse video`,
+          tag: ` @rodrigodcss`,
+        },
+      ],
+    },
+  ];
   return (
     <>
-      <div class="post-wrapper">
-        <div class="post-header">
-          <div class="post-header-author">
-            <a href="#">
-              <img class="post-header-author-img" src="assets/meowed 1.png" />
-            </a>
-            <a class="post-header-author-name" href="#">
-              meowed
-            </a>
-          </div>
-
-          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-        </div>
-        <img src="assets/gato-telefone 1.png" />
-        <div class="post-footer">
-          <div class="post-footer-actions">
-            <ion-icon class="post-heart" name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
-        </div>
-        <div class="post-likes">
-          <a href="#">
-            <img src="assets/respondeai 1.png" />
-          </a>
-          <p>
-            Curtido por
-            <a href="#">respondeai</a>e<a href="#">outras 101.523 pessoas</a>
-          </p>
-        </div>
-        <div class="comments-header">
-          <a href="#"> Clique para ver todos os 987 comentários</a>
-        </div>
-        <div class="comments">
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                lester
-              </a>
-              This cat can use the phone, I knew that
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                merellalunkes
-              </a>
-              ownti que fofoleto!!!
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                rodrigodcss
-              </a>
-              Que paia
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment-time">
-            <a href="#">há 2 horas</a>
-          </div>
-        </div>
-        <div class="add-comment">
-          <div class="add-comment-left">
-            <ion-icon name="happy-outline"></ion-icon>
-            <input placeholder="Adicione um comentário..." />
-          </div>
-          <div class="add-comment-right">Publicar</div>
-        </div>
-      </div>
-      <div class="post-wrapper">
-        <div class="post-header">
-          <div class="post-header-author">
-            <a href="#">
-              <img class="post-header-author-img" src="assets/barked 1.png" />
-            </a>
-            <a class="post-header-author-name" href="#">
-              barked
-            </a>
-          </div>
-
-          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-        </div>
-        <img src="assets/dog 1.png" />
-        <div class="post-footer">
-          <div class="post-footer-actions">
-            <ion-icon class="post-heart" name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
-        </div>
-        <div class="post-likes">
-          <a href="#">
-            <img src="assets/adorableanimals 1.png" />
-          </a>
-          <p>
-            Curtido por
-            <a href="#">adorable_animals</a>e
-            <a href="#">outras 99.159 pessoas</a>
-          </p>
-        </div>
-
-        <div class="comments-header">
-          <a href="#"> Clique para ver todos os 987 comentários</a>
-        </div>
-        <div class="comments">
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                gutsyputsy
-              </a>
-              olha que lindo amooor
-              <a class="tags" href="#">
-                @agoodoy
-              </a>
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                iverti.radaveli
-              </a>
-              preciso mandar isso no grupo da família!
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                rodrigodcss
-              </a>
-              Que paia 2
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment-time">
-            <a href="#">há 2 horas</a>
-          </div>
-        </div>
-        <div class="add-comment">
-          <div class="add-comment-left">
-            <ion-icon name="happy-outline"></ion-icon>
-            <input placeholder="Adicione um comentário..." />
-          </div>
-          <div class="add-comment-right">Publicar</div>
-        </div>
-      </div>
-      <div class="post-wrapper">
-        <div class="post-header">
-          <div class="post-header-author">
-            <a href="#">
-              <img class="post-header-author-img" src="../assets/beetle.jpg" />
-            </a>
-            <a class="post-header-author-name" href="#">
-              beetlejuice
-            </a>
-          </div>
-
-          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-        </div>
-        <video width="612" height="612" autoplay controls muted>
-          <source src="assets/Oblivion NPC Conversation.mp4" type="video/mp4" />
-          <source src="assets/Oblivion NPC Conversation.ogg" type="video/ogg" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="post-footer">
-          <div class="post-footer-actions">
-            <ion-icon class="post-heart" name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
-        </div>
-        <div class="post-likes">
-          <a href="#">
-            <img src="assets/chibirdart 1.png" />
-          </a>
-          <p>
-            Curtido por
-            <a href="#">chibirdart</a>e<a href="#">outras 99.159 pessoas</a>
-          </p>
-        </div>
-
-        <div class="comments-header">
-          <a href="#"> Clique para ver todos os 987 comentários</a>
-        </div>
-        <div class="comments">
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                lester
-              </a>
-              That was a long time ago
-              <a class="tags" href="#">
-                @sean
-              </a>
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                merellalunkes
-              </a>
-              para de me manda esse video
-              <a class="tags" href="#">
-                @leandrodcss
-              </a>
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment">
-            <p>
-              <a class="comment-author" href="#">
-                julianasantos
-              </a>
-              para de me manda esse video
-              <a class="tags" href="#">
-                @rodrigodcss
-              </a>
-            </p>
-            <ion-icon name="heart-outline"></ion-icon>
-          </div>
-          <div class="comment-time">
-            <a href="#">há 2 horas</a>
-          </div>
-        </div>
-        <div class="add-comment">
-          <div class="add-comment-left">
-            <ion-icon name="happy-outline"></ion-icon>
-            <input placeholder="Adicione um comentário..." />
-          </div>
-          <div class="add-comment-right">Publicar</div>
-        </div>
-      </div>
+      {postProps.map((p) => (
+        <Post
+          author={p.author}
+          authorImg={p.authorImg}
+          postImg={p.postImg}
+          userLiked={p.userLiked}
+          userLikedImg={p.userLikedImg}
+          likesAmount={p.likesAmount}
+          lastCommentTime={p.lastCommentTime}
+          commentsAmount={p.commentsAmount}
+          comment1Author={p.comments[0].author}
+          comment1Text={p.comments[0].text}
+          comment1Tag={p.comments[0].tag}
+          comment2Author={p.comments[1].author}
+          comment2Text={p.comments[1].text}
+          comment2Tag={p.comments[1].tag}
+          comment3Author={p.comments[2].author}
+          comment3Text={p.comments[2].text}
+          comment3Tag={p.comments[2].tag}
+          video={p.video}
+          videoMp4={p.videoMp4}
+          videoOgg={p.videoOgg}
+        />
+      ))}
     </>
   );
 }

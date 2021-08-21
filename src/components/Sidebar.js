@@ -1,6 +1,7 @@
 import SidebarSuggestion from "./SidebarSuggestion";
 
 export default function Sidebar() {
+  const user = {name: `Leandro Schmidt`, username: `leandrodcs`, image: `assets/catanacomics 1.png`};
   const suggestions = [
     {name: `bad.vibes.memes`, image: `assets/badvibesmemes 1.png`, follows: true},
     {name: `chibirdart`, image: `assets/chibirdart 1.png`, follows: true},
@@ -8,12 +9,10 @@ export default function Sidebar() {
     {name: `adorable_animals`, image: `assets/adorableanimals 1.png`, follows: true},
     {name: `smallcutecats`, image: `assets/smallcutecats 1.png`, follows: true},
   ];
-  const user = {name: `Leandro Schmidt`, username: `leandrodcs`, image: `assets/catanacomics 1.png`}
 
   return (
     <div class="sidebar">
       <SidebarHeader name={user.name} username={user.username} image={user.image}/>
-
       <div class="suggestions-header">
         <p>Sugestões para você</p>
         <a href="#">Ver tudo</a>
